@@ -1,279 +1,321 @@
 @font-face {
-    font-display: swap;
-    font-family: 'Montserrat';
-    font-weight: 300;
-    src: url('../fonts/montserrat-v26-cyrillic_latin-300.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 300;
+  src: url("../fonts/montserrat-v26-cyrillic_latin-300.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    src: url('../fonts/montserrat-v26-cyrillic_latin-regular.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("../fonts/montserrat-v26-cyrillic_latin-regular.woff2")
+    format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    src: url('../fonts/montserrat-v26-cyrillic_latin-600.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 600;
+  src: url("../fonts/montserrat-v26-cyrillic_latin-600.woff2") format("woff2");
 }
 
 @font-face {
-    font-display: swap;
-    font-family: 'Montserrat';
-    font-weight: 900;
-    src: url('../fonts/montserrat-v26-cyrillic_latin-900.woff2') format('woff2');
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 900;
+  src: url("../fonts/montserrat-v26-cyrillic_latin-900.woff2") format("woff2");
 }
 
 :root {
-    --color-brand-light: #819B57;
-    --color-brand-dark: #465929;
-    --color-brand-brown: #A18268;
-    --color-primary-light: #FAF4EA;
-    --color-primary-dark: #31261A; 
+  --color-brand-light: #cfcfbc;
+  --color-brand-normal: #819b57;
+  --color-brand-dark: #465929;
+  --color-secondary-dark: #a18268;
+  --color-primary-light: #faf4ea;
+  --color-primary-dark: #31261a;
 }
 
 /* Base */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    color: var(--color-primary-dark);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin-top: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
 }
 
 .visually-hidden {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .section {
-    padding: 48px 0;
+  padding: 48px 0;
 }
 
 .container {
-    padding: 0 24px;
-    width: 100%;
-    max-width: 1288px;
-    margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
 }
 
 /* Button */
 .button {
-    padding: 16px 32px;
-    color: var(--color-primary-light);
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 8px;
-    border: 2px solid var(--color-brand-light);
-    background-color: var(--color-brand-light);
-    cursor: pointer;
+  padding: 16px 32px;
+  color: var(--color-primary-light);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid var(--color-brand-normal);
+  background-color: var(--color-brand-normal);
+  cursor: pointer;
 }
 
 .button:hover {
-    color: var(--color-brand-dark);
-    background-color: transparent;
+  color: var(--color-brand-dark);
+  background-color: transparent;
 }
 
 /* Link */
 .link {
-    color: var(--color-primary-light);
-    text-decoration: none;
+  color: var(--color-primary-light);
+  text-decoration: none;
 }
 
 .link:hover {
-    color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 /* Header */
 .header-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .header-nav {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    gap: 40px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .header-menu {
-    display: flex;
-    align-items: center;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /* Hero section */
 .hero-section {
-    padding: 272px 0;
+  padding: 272px 0;
+  background-image: url("../images/hero-section-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 .hero-title {
-    margin-bottom: 0;
-    color: var(--color-primary-light);
-    font-size: 128px;
-    font-weight: 900;
-    text-align: center;
+  margin-bottom: 0;
+  color: var(--color-primary-light);
+  font-size: 128px;
+  font-weight: 900;
+  text-align: center;
 }
 
 .hero-title .accent {
-    color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 /* Advantages section */
 .advantages-section {
-    background-color: var(--color-brand-light);
-    padding: 16px 0;
+  background-color: var(--color-brand-normal);
+  padding: 16px 0;
 }
 
-.advantages-list { 
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;  
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .advantages-item {
-    color: var(--color-primary-light);
-    font-size: 20px;
-    font-weight: 300;
+  color: var(--color-primary-light);
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .section-title {
-    font-size: 64px;
-    font-weight: 900;
-    line-height: 1.3;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.section-title.centered {
+  text-align: center;
 }
 
 .section-title .accent {
-    color: var(--color-brand-dark);
+  color: var(--color-brand-dark);
 }
 
 /* Traditions section */
 .traditions-section {
-    padding-top: 96px;
+  padding-top: 96px;
 }
 
 .traditions-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .traditions-content {
-    max-width: 710px;
+  max-width: 710px;
 }
 
 .traditions-title {
-    margin-bottom: 42px;
+  margin-bottom: 42px;
 }
 
 .traditions-text .brand {
-    color: var(--color-brand-light);
-    font-weight: 600;
+  color: var(--color-brand-normal);
+  font-weight: 600;
 }
 
 .traditions-text .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* Chefs section */
 .chefs-title {
-    margin-bottom: 80px;
+  max-width: 560px;
+  margin: 0 auto 80px;
+}
+
+.chefs-title::before,
+.chefs-title::after {
+  display: block;
+  width: 352px;
+  border: 2px solid var(--color-brand-light);
+  content: "";
 }
 
 .chef-title {
-    margin-bottom: 16px;
-    font-size: 40px;
-    font-weight: 600;
+  margin-bottom: 16px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.chef-photo {
+  border-radius: 4px 4px 4px 200px;
+  box-shadow: -16px 16px 0 0 var(--color-primary-light),
+    -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 /* Format section */
 .formats-title {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .formats-list {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .formats-item {
-    flex-basis: calc((100% - 40px) / 3);
+  flex-basis: calc((100% - 40px) / 3);
 }
 
 .format-card {
-    height: 440px;
-    padding: 24px;
-    border: 1px solid lightgrey;
-    border-radius: 16px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+  height: 444px;
+  padding: 24px;
+  border: 1px solid lightgrey;
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    #31261a 100%
+  );
 }
 
 .format-title {
-    font-size: 24px;
-    font-weight: 600;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .format-text {
-    font-size: 14px;
-    font-weight: 300;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 /* Contacts section */
 .contact-title {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .contacts-text {
-    color: var(--color-brand-dark);
+  color: var(--color-brand-dark);
 }
 
 /* Footer */
+.footer {
+  background-image: url("../images/footer-background.png");
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .address-link {
-    color: var(--color-primary-light);
-    font-size: 16px;
-    font-weight: 300;
-    text-decoration: none;
+  color: var(--color-primary-light);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
 }
 
 .address-link:hover {
-    color: var(--color-brand-light);
+  color: var(--color-brand-normal);
 }
 
 .address-copyright {
-    color: var(--color-brand-brown);
-    font-size: 14px;
+  color: var(--color-secondary-dark);
+  font-size: 14px;
 }
