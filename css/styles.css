@@ -230,16 +230,25 @@ address {
 
 /* Chefs section */
 .chefs-title {
-  max-width: 560px;
   margin: 0 auto 80px;
+  position: relative;
 }
 
 .chefs-title::before,
 .chefs-title::after {
-  display: block;
-  width: 352px;
+  position: absolute;
+  bottom: 20px;
+  width: 340px;
   border: 2px solid var(--color-brand-light);
   content: "";
+}
+
+.chefs-title::before {
+  left: 0;
+}
+
+.chefs-title::after {
+  right: 0;
 }
 
 .chefs-list {
