@@ -4,29 +4,24 @@
   font-weight: 300;
   src: url("../fonts/montserrat-v26-cyrillic_latin-300.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Montserrat";
   font-weight: 400;
-  src: url("../fonts/montserrat-v26-cyrillic_latin-regular.woff2")
-    format("woff2");
+  src: url("../fonts/montserrat-v26-cyrillic_latin-regular.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Montserrat";
   font-weight: 600;
   src: url("../fonts/montserrat-v26-cyrillic_latin-600.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
   font-family: "Montserrat";
   font-weight: 900;
   src: url("../fonts/montserrat-v26-cyrillic_latin-900.woff2") format("woff2");
 }
-
 :root {
   --color-brand-light: #cfcfbc;
   --color-brand-normal: #819b57;
@@ -36,11 +31,11 @@
   --color-primary-dark: #31261a;
 }
 
-/* Base */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -86,18 +81,6 @@ address {
   overflow: hidden;
 }
 
-.section {
-  padding: 48px 0;
-}
-
-.container {
-  padding: 0 24px;
-  width: 100%;
-  max-width: 1288px;
-  margin: 0 auto;
-}
-
-/* Button */
 .button {
   padding: 16px 32px;
   color: var(--color-primary-light);
@@ -108,6 +91,7 @@ address {
   border: 2px solid var(--color-brand-normal);
   background-color: var(--color-brand-normal);
   cursor: pointer;
+  -webkit-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
 
@@ -122,11 +106,10 @@ address {
   border-color: currentColor;
   cursor: not-allowed;
 } */
-
-/* Link */
 .link {
   color: var(--color-primary-light);
   text-decoration: none;
+  -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
@@ -134,7 +117,6 @@ address {
   color: var(--color-brand-normal);
 }
 
-/* Header */
 .header {
   position: absolute;
   top: 0;
@@ -144,36 +126,47 @@ address {
 }
 
 .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 40px;
 }
 
 .header-nav {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 40px;
 }
 
 .header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 64px;
-  flex-grow: 1;
-  justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-/* Hero section */
 .hero-section {
   padding: 272px 0;
-  background-image: linear-gradient(
-      103deg,
-      rgba(18, 18, 17, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url("../images/hero-section-background.jpg");
+  background-image: linear-gradient(103deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url("../images/hero-section-background.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -191,15 +184,18 @@ address {
   color: var(--color-brand-normal);
 }
 
-/* Advantages section */
 .advantages-section {
   background-color: var(--color-brand-normal);
   padding: 16px 0;
 }
 
 .advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 40px;
 }
 
@@ -223,14 +219,29 @@ address {
   color: var(--color-brand-dark);
 }
 
+.section {
+  padding: 48px 0;
+}
+
+.container {
+  padding: 0 24px;
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+}
+
 /* Traditions section */
 .traditions-section {
   padding-top: 96px;
 }
 
 .traditions-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 40px;
 }
 
@@ -275,16 +286,22 @@ address {
 }
 
 .chefs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 40px 30px;
 }
 
 .chefs-item {
-  flex-basis: calc((100% - 30px) / 2);
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
 }
 
 .chef-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
@@ -305,8 +322,8 @@ address {
 
 .chef-photo {
   border-radius: 4px 4px 4px 200px;
-  box-shadow: -16px 16px 0 0 var(--color-primary-light),
-    -16px 16px 0 2px var(--color-secondary-dark);
+  -webkit-box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
+          box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
 /* Format section */
@@ -315,19 +332,27 @@ address {
 }
 
 .formats-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 32px;
 }
 
 .formats-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .formats-item {
-  flex-basis: calc((100% - 40px) / 3);
+  -ms-flex-preferred-size: calc((100% - 40px) / 3);
+      flex-basis: calc((100% - 40px) / 3);
 }
 
 .format-card {
@@ -335,17 +360,17 @@ address {
   padding: 24px;
   border: 1px solid lightgrey;
   border-radius: 16px;
-  background: linear-gradient(
-    180deg,
-    rgba(49, 38, 26, 0) 55.21%,
-    rgba(49, 38, 26, 0.71) 72.92%,
-    #31261a 100%
-  );
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(55.21%, rgba(49, 38, 26, 0)), color-stop(72.92%, rgba(49, 38, 26, 0.71)), to(#31261a));
+  background: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, #31261a 100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .format-card:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .format-title {
@@ -367,16 +392,25 @@ address {
   border-radius: 50%;
   border: 1px solid var(--color-primary-dark);
   fill: var(--color-primary-dark);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   cursor: pointer;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
 
 .carousel-button.next {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .carousel-button:hover {
@@ -390,6 +424,8 @@ address {
 }
 
 .contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 32px;
 }
@@ -403,7 +439,8 @@ address {
 }
 
 .contact-map {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   border: none;
   border-radius: 16px;
 }
@@ -442,25 +479,34 @@ address {
 }
 
 .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
 
 .footer-nav,
 .footer-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   gap: 20px;
 }
 
 .footer-logo,
 .footer-menu {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .address-list,
 .address-info {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   z-index: 2;
 }
 
@@ -469,6 +515,7 @@ address {
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;
+  -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
@@ -478,6 +525,7 @@ address {
 
 .address-icon {
   fill: var(--color-primary-light);
+  -webkit-transition: fill 0.3s;
   transition: fill 0.3s;
 }
 
@@ -498,10 +546,17 @@ address {
   right: 0;
   bottom: 0;
   padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
 }
 
@@ -556,10 +611,50 @@ address {
   outline: none;
 }
 
+.form-input::-webkit-input-placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17px;
+}
+
+.form-input::-moz-placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17px;
+}
+
+.form-input:-ms-input-placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17px;
+}
+
+.form-input::-ms-input-placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17px;
+}
+
 .form-input::placeholder {
   color: var(--color-secondary-dark);
   font-size: 16px;
   line-height: 1.17px;
+}
+
+.form-input:focus::-webkit-input-placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-input:focus::-moz-placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-input:focus:-ms-input-placeholder {
+  color: var(--color-primary-dark);
+}
+
+.form-input:focus::-ms-input-placeholder {
+  color: var(--color-primary-dark);
 }
 
 .form-input:focus::placeholder {
@@ -582,4 +677,4 @@ address {
 .form-terms-link {
   color: var(--color-primary-dark);
   text-underline-offset: 2px;
-}
+}/*# sourceMappingURL=main.css.map */
